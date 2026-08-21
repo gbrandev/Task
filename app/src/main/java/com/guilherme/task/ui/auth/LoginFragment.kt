@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.guilherme.task.R
 import com.guilherme.task.databinding.FragmentLoginBinding
@@ -42,6 +43,21 @@ class LoginFragment : Fragment() {
 
         binding.btnRecover.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_recoverAccountFragment)
+        }
+    }
+
+    private fun validadeData(){
+        val email = binding.txtemail.text.toString().trim()
+        val senha = binding.txtsenha.text.toString().trim()
+        if (email.isNotBlank()){
+            if (senha.isNotBlank()){
+                findNavController().navigate(R.id.action_global_homeFragment2)
+
+            } else{
+                Toast.makeText(requireContext(),"Preencha a senha!", Toast.LENGTH_SHORT).show()
+            }
+        } else{
+            Toast.makeText(requireContext(),"Preencha seu email!", Toast.LENGTH_SHORT).show()
         }
     }
 

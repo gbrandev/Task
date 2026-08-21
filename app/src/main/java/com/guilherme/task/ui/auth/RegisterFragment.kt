@@ -7,11 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import com.guilherme.task.R
 import com.guilherme.task.databinding.FragmentRegisterBinding
-
-private var _binding: FragmentRegisterBinding? = null
-private val binding get() = _binding!!
+import com.guilherme.task.util.initToolbar
 
 class RegisterFragment : Fragment() {
+
+    private var _binding: FragmentRegisterBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -22,10 +23,13 @@ class RegisterFragment : Fragment() {
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initToolbar(binding.toolbar)
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
-
-
 }
