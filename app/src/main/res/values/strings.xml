@@ -11,7 +11,23 @@
     <string name="password_empty">Preencha a senha!</string>
     <string name="email_empty">Preencha seu email!</string>
 
-    <!--Register Fragment-->
     <string name="password_empty_register_fragment">Preencha uma senha!</string>
     <string name="email_empty_register_fragment">Preencha uma email válido!</string>
+    <string name="description_empty_form_task_fragment">Preencha uma descrição!</string>
+    <string name="title_description_fragment_form">Descrição</string>
+    <string name="edittext_form_task">Informe sua nova Tarefa</string>
+    <string name="status_form_task">Status</string>
+    <string name="a_fazer_status_fragment_form">A Fazer</string>
+    <string name="fazendo_status_fragment_form">Fazendo</string>
+    <string name="feita_status_fragment_form">Feita</string>
+    <string name="buttom_form_task">Salvar</string>
+    <string name="email">E-Mail</string>
+    <string name="insert_email">Digite seu E-Mail</string>
+    <string name="senha">Senha</string>
+    <string name="insert_password">Digite sua senha</string>
+    <string name="login_buttom">Login</string>
+    <string name="create_account_buttom">Criar Conta</string>
+    <string name="recuperar_conta_buttom">Recuperar Conta</string>
+    <string name="txt_recemail">Informe seu e-mail de cadastro para receber \n um link para alteração de senha.</string>
+    <string name="send_buttom">Enviar</string>
 </resources>

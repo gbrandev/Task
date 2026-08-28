@@ -24,7 +24,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Recuperar Conta"
+                android:text="@string/recuperar_conta_buttom"
                 android:textColor="@color/white"
                 android:layout_gravity="center_horizontal"/>
 
@@ -42,7 +42,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textViewMensagem"
-                android:text="Informe seu e-mail de cadastro para receber \n um link para alteração de senha."
+                android:text="@string/txt_recemail"
                 android:textColor="@color/white"
                 android:textAlignment="center"
                 android:layout_marginTop="24dp"/>
@@ -51,7 +51,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textViewEmail"
-                android:text="E-mail"
+                android:text="@string/email"
                 android:textColor="@color/white"
                 android:layout_marginTop="24dp"/>
 
@@ -59,23 +59,20 @@
                 android:id="@+id/edittextEmail"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:hint="Digite seu E-Mail"
+                android:hint="@string/insert_email"
                 android:inputType="textEmailAddress"
                 android:padding="16dp"
                 android:layout_marginTop="4dp"
-                android:background="@drawable/bg_edit_text"/>
+                style="@style/EditTextTheme"/>
 
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/buttonEnviar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Enviar"
-                android:textColor="@color/color_default"
-                android:backgroundTint="@null"
+                android:text="@string/send_buttom"
                 android:layout_marginTop="16dp"
-                app:backgroundTint="@null"
-                android:background="@drawable/bg_btn"/>
+                style="@style/ButtomTheme"/>
 
             <ProgressBar
                 android:layout_width="wrap_content"

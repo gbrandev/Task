@@ -23,7 +23,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Criar Conta"
+                android:text="@string/create_account_buttom"
                 android:textColor="@color/white"
                 android:layout_gravity="center_horizontal"/>
 
@@ -40,23 +40,23 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="E-Mail"
+                android:text="@string/email"
                 android:textColor="@color/white"/>
 
             <EditText
                 android:id="@+id/edittextEmail"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:hint="Digite seu E-Mail"
+                android:hint="@string/insert_email"
                 android:inputType="textEmailAddress"
                 android:padding="16dp"
                 android:layout_marginTop="4dp"
-                android:background="@drawable/bg_edit_text"/>
+                style="@style/EditTextTheme"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Senha"
+                android:text="@string/senha"
                 android:textColor="@color/white"
                 android:layout_marginTop="16dp"/>
 
@@ -64,22 +64,19 @@
                 android:id="@+id/edittextSenha"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:hint="Digite sua senha"
+                android:hint="@string/insert_password"
                 android:inputType="textPassword"
                 android:padding="16dp"
                 android:layout_marginTop="4dp"
-                android:background="@drawable/bg_edit_text"/>
+                style="@style/EditTextTheme"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/buttonRegister"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Enviar"
-                android:textColor="@color/color_default"
-                android:backgroundTint="@null"
+                android:text="@string/send_buttom"
                 android:layout_marginTop="16dp"
-                app:backgroundTint="@null"
-                android:background="@drawable/bg_btn"/>
+                style="@style/ButtomTheme"/>
 
             <ProgressBar
                 android:layout_width="wrap_content"

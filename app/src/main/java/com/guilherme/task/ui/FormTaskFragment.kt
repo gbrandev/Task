@@ -6,8 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.guilherme.task.R
 import com.guilherme.task.databinding.FragmentFormTaskBinding
 import com.guilherme.task.util.initToolbar
+import com.guilherme.task.util.showBottomSheet
 
 
 class FormTaskFragment : Fragment() {
@@ -32,16 +34,16 @@ class FormTaskFragment : Fragment() {
 
     private fun initListener(){
         binding.buttonSave.setOnClickListener {
-            validadeData()
+            validateData()
         }
     }
 
-    private fun validadeData(){
+    private fun validateData(){
         val description = binding.editTextDescricao.text.toString().trim()
         if (description.isNotBlank()){
             Toast.makeText(requireContext(),"Tudo OK!", Toast.LENGTH_SHORT).show()
         }else{
-            Toast.makeText(requireContext(),"Preencha uma descrição!", Toast.LENGTH_SHORT).show()
+            showBottomSheet(message = getString(R.string.description_empty_form_task_fragment))
         }
     }
 
