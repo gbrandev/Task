@@ -33,17 +33,30 @@ class HomeFragment : Fragment() {
 
     private fun initTabs() {
         val pagerAdapter = ViewPagerAdapter(requireActivity())
-        binding.viewPager.adapter = pagerAdapter
-        pagerAdapter.addFragment(TodoFragment(), R.string.status_task_todo)
-        pagerAdapter.addFragment(TodoFragment(), R.string.status_task_doing)
-        pagerAdapter.addFragment(TodoFragment(), R.string.status_task_done)
 
+        pagerAdapter.addFragment(
+            TodoFragment(),
+            R.string.status_task_todo
+        )
+
+        pagerAdapter.addFragment(
+            DoingFragment(),
+            R.string.status_task_doing
+        )
+
+        pagerAdapter.addFragment(
+            DoneFragment(),
+            R.string.status_task_done
+        )
+
+        binding.viewPager.adapter = pagerAdapter
         binding.viewPager.offscreenPageLimit = pagerAdapter.itemCount
 
-        TabLayoutMediator(binding.tabs, binding.viewPager){ tab, position ->
+        TabLayoutMediator(binding.tabs, binding.viewPager) { tab, position ->
             tab.text = getString(pagerAdapter.getTitle(position))
         }.attach()
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()

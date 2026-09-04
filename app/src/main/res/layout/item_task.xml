@@ -41,6 +41,7 @@
                 android:id="@+id/buttonBack"
                 android:background="@android:color/transparent"
                 android:src="@drawable/icback"
+
                 app:layout_constraintBottom_toBottomOf="@+id/buttonEditar"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/buttonEditar"
