@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
+import com.google.firebase.auth.FirebaseAuth
 import com.guilherme.task.R
 import com.guilherme.task.databinding.FragmentLoginBinding
 import com.guilherme.task.databinding.FragmentRegisterBinding
@@ -15,6 +16,7 @@ import com.guilherme.task.util.showBottomSheet
 
 class LoginFragment : Fragment() {
 
+    private lateinit var auth: FirebaseAuth
     private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
 
@@ -30,6 +32,7 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        auth = FirebaseAuth.getInstance()
         initListener();
     }
 
@@ -59,6 +62,21 @@ class LoginFragment : Fragment() {
             }
         } else{
             showBottomSheet(message = getString(R.string.email_empty))
+        }
+    }
+
+    private fun checkAuth(){
+        try {
+            val currentUser = auth.currentUser
+
+            if (currentUser != null){
+                findNavController().navigate(R.id.action_global_homeFragment2)
+            } else{
+                findNavController().navigate(R.id.action_splashFragment_to_authentication)
+            }
+
+        } catch (e: Exception){
+            Toast.makeText(requireContext(), e.message.toString(), Toast.LENGTH_SHORT).show()
         }
     }
 
